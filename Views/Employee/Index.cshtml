@@ -1,0 +1,32 @@
+﻿@model List<EmployeeViewModel>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+<div class="container row">
+
+
+
+    @{
+
+
+        foreach (EmployeeViewModel emp in Model){
+             <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">@emp.Name</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Designation : @emp.Designation</h6>
+                        <p class="card-text">Salary: @emp.Salary</p>
+                        <a class="card-link" asp-controller="Employee" asp-action="Edit" asp-route-id="@emp.Id">Edit</a>
+                        <a asp-controller="Employee" asp-action="Delete" asp-route-id="@emp.Id" class="card-link">Delete</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+    }
+</div>

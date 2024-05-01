@@ -1,0 +1,32 @@
+﻿@model EmployeeViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Update Student</h1>
+
+<form method="post" asp-controller="Employee" asp-action="Edit">
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control">
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Salary" class="form-label"></label>
+        <input asp-for="Salary" class="form-control">
+        <span class="text-danger" asp-validation-for="Salary"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Designation" class="form-label"></label>
+        <input asp-for="Designation" class="form-control">
+        <span class="text-danger" asp-validation-for="Designation"></span>
+    </div>
+
+
+    <div class="mb-3">
+        <input class="btn btn-primary" type="submit" value="Update" />
+    </div>
+
+</form>
